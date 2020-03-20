@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_close_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+
+                    android:fontFamily="@font/gotu_regular"
+                    android:text="@string/text_cancel"
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnConfirmPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/rounded_corner_textview"
+                android:fontFamily="@font/gotu_regular"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/text_confirm_payment"
+                android:textColor="#fff"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/labelBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnConfirmPayment"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/gotu_regular"
+                android:text="@string/text_balance"
+                android:textColor="#000"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/separator1"
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/labelBalance"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:background="#ededed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/separator1"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@+id/labelAmount"
+                android:fontFamily="@font/gotu_regular"
+                android:text="@string/text_dollar"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/labelAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/separator1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="@string/text_amount"
+                android:textColor="#000"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/labelEnterAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelAmount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/gotu_regular"
+                android:text="@string/text_enter_amount" />
+
+            <View
+                android:id="@+id/separator2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/labelEnterAmount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:background="#ededed" />
+
+            <Spinner
+                android:id="@+id/selectStaff"
+                style="@style/SpinnerTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/separator2"
+                android:layout_marginTop="8dp"
+                android:dropDownSelector="@color/colorPrimary"
+                tools:listitem="@layout/list_item" />
+
+            <View
+                android:id="@+id/separator3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/selectStaff"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:background="#ededed" />
+
+            <TextView
+                android:id="@+id/labelLeaveATip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/separator3"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/gotu_regular"
+                android:text="@string/text_leave_a_tip" />
+
+            <LinearLayout
+                android:id="@+id/lnrTips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelLeaveATip"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:background="@drawable/shadow_drawable"
+                    android:fontFamily="@font/gotu_regular"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/text_15_percent"
+                    android:textColor="#000" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:background="@drawable/shadow_drawable"
+                    android:fontFamily="@font/gotu_regular"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/text_18_percent"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:background="@drawable/shadow_drawable"
+                    android:fontFamily="@font/gotu_regular"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/text_20_percent"
+                    android:textColor="#000" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/labelOtherTips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lnrTips"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic_add_circle_outline_black_24dp"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/text_othertip"
+                android:textColor="#000"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/separator4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/labelOtherTips"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:background="#ededed" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/separator4"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="42dp"
+                        android:fontFamily="@font/gotu_regular"
+                        android:text="@string/text_sub_total"
+                        android:textColor="#000"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotu_regular"
+                        android:text="@string/text_0_dollar"
+                        android:textColor="#000"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="42dp"
+                        android:fontFamily="@font/gotu_regular"
+                        android:text="@string/text_tip_amount"
+                        android:textColor="#000"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotu_regular"
+                        android:text="@string/text_0_dollar"
+                        android:textColor="#000"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="200dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="16dp"
+                    android:background="#ededed" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="42dp"
+                        android:fontFamily="@font/gotu_regular"
+                        android:text="@string/text_sub_total"
+                        android:textColor="#000"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotu_regular"
+                        android:text="@string/text_0_dollar"
+                        android:textColor="#000"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

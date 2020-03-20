@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Replicate</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_confirm_payment">Confirm Payment</string>
+    <string name="text_balance">Balance: $60.03</string>
+    <string name="text_amount">0.00</string>
+    <string name="text_dollar">$</string>
+    <string name="text_enter_amount">Enter Amount</string>
+    <string name="text_leave_a_tip">Leave A Tip</string>
+    <string name="text_15_percent">15%</string>
+    <string name="text_18_percent">18%</string>
+    <string name="text_20_percent">20%</string>
+    <string name="text_othertip">Other Tip</string>
+    <string name="text_0_dollar">$0.00</string>
+    <string name="text_sub_total">Subtotal:</string>
+    <string name="text_tip_amount">Tip Amount:</string>
+    <string name="text_select">Select</string>
+</resources>
